@@ -1,8 +1,8 @@
 FROM python:3.9
 
-WORKDIR /fastapi-car-price-pred
+WORKDIR /github-actions-cd
 
-ADD . /fastapi-car-price-pred
+ADD . /github-actions-cd
 
 RUN pip install -r requirements.txt
 

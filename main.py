@@ -31,12 +31,11 @@ def predict(ford_car: FordCar):
     model_rf = joblib.load(model_pkl_file)
 
     # Create a pandas dataframe and select the features the current model expects
-    input_data = pd.DataFrame([[ford_car.year, 
-                                ford_car.fuelType, 
-                                ford_car.engineSize,
-                                ford_car.mileage]], 
-                              columns=['year', 'fuelType', 'engineSize', 'mileage'])
-    
+    input_data = pd.DataFrame(
+        [[ford_car.year, ford_car.fuelType, ford_car.engineSize, ford_car.mileage]],
+        columns=["year", "fuelType", "engineSize", "mileage"],
+    )
+
     prediction = model_rf.predict(input_data)
 
     # Cast the prediction to int

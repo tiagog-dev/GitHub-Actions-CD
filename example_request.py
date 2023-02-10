@@ -9,7 +9,7 @@ car = {
     "mileage": 14337,
     "fuelType": "Petrol",
     "mpg": 58.9,
-    "engineSize": 1
+    "engineSize": 1,
 }
 
 response = requests.post(URL, json=car)
