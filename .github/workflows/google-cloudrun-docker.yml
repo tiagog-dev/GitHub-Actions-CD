@@ -40,7 +40,7 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v1
         with:
           service: fastapi-car-price-pred
-          image: gcr.io/${{ secrets.GCP_PROJECT_ID }}/fastapi-car-price-pred:${{ github.sha }}
+          image: gcr.io/${{ secrets.GCP_PROJECT_ID }}/fastapi-car-price-pred:latest
           region: europe-west1
 
       # If required, use the Cloud Run url output in later steps
