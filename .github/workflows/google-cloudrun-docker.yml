@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: hw-dev
     env:
-      IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/fastapi-car-price-pred:latest
+      IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/my-private-docker-repo:main-f555c0a
     steps:
       # Git checkout
       - name: Checkout
