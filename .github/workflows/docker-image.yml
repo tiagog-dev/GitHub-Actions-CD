@@ -21,6 +21,7 @@ jobs:
       uses: docker/build-push-action@v4
       with:
           image: tiagogdev/my-private-docker-repo
-          register: docker.io
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          tags: v1
+          dockerfile: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
