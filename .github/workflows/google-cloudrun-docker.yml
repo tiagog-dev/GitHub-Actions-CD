@@ -50,7 +50,7 @@ on:
 
 env:
   PROJECT_ID: wise-ally-376418 # TODO: update Google Cloud project id
-  SERVICE: github-actions-cd # TODO: update Cloud Run service name
+  SERVICE: fastapi-car-price-pred # TODO: update Cloud Run service name
   REGION: europe-west1 # TODO: update Cloud Run service region
 
 jobs:
