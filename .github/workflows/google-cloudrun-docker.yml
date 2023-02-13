@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     environment: hw-dev
     env:
-      IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/site:latest
+      IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/fastapi-car-price-pred:latest
     steps:
       # Git checkout
       - name: Checkout
         uses: actions/checkout@v2
 
-      # Login to GCP
+      # Login to Google Cloud Platform
       - name: Google Auth
         id: auth
         uses: 'google-github-actions/auth@v0'
@@ -37,4 +37,4 @@ jobs:
 
       # Deploy docker image
       - name: Deploy Docker image
-        run: gcloud run deploy site --image $IMAGE_NAME --region europe-west1 --memory 128Mi --min-instances 0 --max-instances 1 --platform managed --port 80 --allow-unauthenticated
+        run: gcloud run deploy fastapi-car-price-pred --image $IMAGE_NAME --region europe-west1 --memory 128Mi --min-instances 0 --max-instances 1 --platform managed --port 80 --allow-unauthenticated
